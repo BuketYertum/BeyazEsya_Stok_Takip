@@ -1,0 +1,33 @@
+﻿
+@model STOK.Models.Entity.TBL_URUNLER
+
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Ürün Ekleme</h2>
+
+
+<form method="post">
+    <label>Ürün adı :</label>
+    @Html.TextBoxFor(x => x.URUNAD, new { @class = "form-control" })
+    <br />
+    <label>Marka :</label>
+    @Html.TextBoxFor(x => x.URUNMARKA, new { @class = "form-control" })
+    <br />
+    <label>Stok :</label>
+    @Html.TextBoxFor(x => x.URUNSTOK, new { @class = "form-control" })
+    <br />
+    <label>Alış Fiyatı :</label>
+    @Html.TextBoxFor(x => x.URUNALISFIYAT, new { @class = "form-control" })
+    <br />
+    <label>Satış Fiyatı :</label>
+    @Html.TextBoxFor(x => x.URUNSATISFIYAT, new { @class = "form-control" })
+    <br />
+    <label>Kategori :</label>
+    @Html.DropDownListFor(x => x.TBL_KATEGORILER.KATEGORIID, (List<SelectListItem>)ViewBag.drop, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">KAYDET</button>
+</form>
+

@@ -1,0 +1,38 @@
+﻿@model STOK.Models.Entity.TBL_MUSTERILER
+
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<form method="post">
+    <h2>Yeni MÜşteri Ekleme</h2>
+    <br />
+
+    <label>Müşteri Adı</label>
+    @Html.TextBoxFor(x => x.MUSTERIAD, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.MUSTERIAD, "", new { @style = "color:red" })    @*models altında yetkisi verdik.*@
+    <br />
+
+    <label>Müşteri Soyad</label>
+    @Html.TextBoxFor(x => x.MUSTERISOYAD, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.MUSTERISOYAD, "", new { @style = "color:red" })
+    <br />
+
+    <label>Şehir</label>
+    @Html.TextBoxFor(x => x.MUSTERISEHIR, new { @class = "form-control" })
+    <br />
+
+    <label>Bakiye</label>
+    @Html.TextBoxFor(x => x.MUSTERIBAKIYE, new { @class = "form-control" })
+    <br />
+
+
+
+    <button class="btn btn-success">KAYDET</button>
+
+</form>
+
+
+

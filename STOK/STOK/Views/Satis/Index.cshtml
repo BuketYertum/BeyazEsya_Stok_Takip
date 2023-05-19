@@ -1,0 +1,35 @@
+﻿
+@using STOK.Models.Entity;
+@model List<TBL_SATIS>
+
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ÜRÜN</th>
+        <th>PERSONEL</th>
+        <th>MÜŞTERİ</th>
+        <th>FİYAT</th>
+        <th>TARİH</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.TBL_URUNLER.URUNAD</td>                                                    @*numara yerine o degerin karsılığını yazdırdım.*@
+            <td>@x.TBL_PERSONELLER.PERSONELAD @x.TBL_PERSONELLER.PERSONELSOYAD</td>           @*numara yerine o degerin karsılığını yazdırdım.*@
+            <td>@x.TBL_MUSTERILER.MUSTERIAD @x.TBL_MUSTERILER.MUSTERISOYAD</td>               @*numara yerine o degerin karsılığını yazdırdım.*@
+            <td>@x.FIYAT</td>
+            <td>@x.TARIH</td>
+        </tr>
+    }
+</table>
+<a href="/Satis/YeniSatis" class="btn btn-primary">Yeni Satış Bilgisi</a>

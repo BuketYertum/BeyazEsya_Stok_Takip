@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DboStokModelStoreContainer" CdmEntityContainer="DboStokEntities">
+    <EntitySetMapping Name="TBL_KATEGORILER">
+      <EntityTypeMapping TypeName="DboStokModel.TBL_KATEGORILER">
+        <MappingFragment StoreEntitySet="TBL_KATEGORILER">
+          <ScalarProperty Name="KATEGORIID" ColumnName="KATEGORIID" />
+          <ScalarProperty Name="KATEGORIAD" ColumnName="KATEGORIAD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_MUSTERILER">
+      <EntityTypeMapping TypeName="DboStokModel.TBL_MUSTERILER">
+        <MappingFragment StoreEntitySet="TBL_MUSTERILER">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="MUSTERIID" ColumnName="MUSTERIID" />
+          <ScalarProperty Name="MUSTERIAD" ColumnName="MUSTERIAD" />
+          <ScalarProperty Name="MUSTERISOYAD" ColumnName="MUSTERISOYAD" />
+          <ScalarProperty Name="MUSTERISEHIR" ColumnName="MUSTERISEHIR" />
+          <ScalarProperty Name="MUSTERIBAKIYE" ColumnName="MUSTERIBAKIYE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_PERSONELLER">
+      <EntityTypeMapping TypeName="DboStokModel.TBL_PERSONELLER">
+        <MappingFragment StoreEntitySet="TBL_PERSONELLER">
+          <ScalarProperty Name="PERSONELID" ColumnName="PERSONELID" />
+          <ScalarProperty Name="PERSONELAD" ColumnName="PERSONELAD" />
+          <ScalarProperty Name="PERSONELSOYAD" ColumnName="PERSONELSOYAD" />
+          <ScalarProperty Name="PERSONELDEPARTMAN" ColumnName="PERSONELDEPARTMAN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_SATIS">
+      <EntityTypeMapping TypeName="DboStokModel.TBL_SATIS">
+        <MappingFragment StoreEntitySet="TBL_SATIS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="URUN" ColumnName="URUN" />
+          <ScalarProperty Name="PERSONEL" ColumnName="PERSONEL" />
+          <ScalarProperty Name="MUSTERI" ColumnName="MUSTERI" />
+          <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
+          <ScalarProperty Name="TARIH" ColumnName="TARIH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_URUNLER">
+      <EntityTypeMapping TypeName="DboStokModel.TBL_URUNLER">
+        <MappingFragment StoreEntitySet="TBL_URUNLER">
+          <ScalarProperty Name="DURUM" ColumnName="DURUM" />
+          <ScalarProperty Name="URUNID" ColumnName="URUNID" />
+          <ScalarProperty Name="URUNAD" ColumnName="URUNAD" />
+          <ScalarProperty Name="URUNMARKA" ColumnName="URUNMARKA" />
+          <ScalarProperty Name="URUNSTOK" ColumnName="URUNSTOK" />
+          <ScalarProperty Name="URUNALISFIYAT" ColumnName="URUNALISFIYAT" />
+          <ScalarProperty Name="URUNSATISFIYAT" ColumnName="URUNSATISFIYAT" />
+          <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_ADMIN">
+      <EntityTypeMapping TypeName="DboStokModel.TBL_ADMIN">
+        <MappingFragment StoreEntitySet="TBL_ADMIN">
+          <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+          <ScalarProperty Name="KULLANICI" ColumnName="KULLANICI" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

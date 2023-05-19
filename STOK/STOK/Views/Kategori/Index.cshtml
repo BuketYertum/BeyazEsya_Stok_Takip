@@ -1,0 +1,30 @@
+﻿
+@using STOK.Models.Entity;
+@model List<TBL_KATEGORILER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KATEGORİ ADI</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.KATEGORIID</td>
+            <td>@x.KATEGORIAD</td>
+            <td> <a href="/Kategori/Sil/@x.KATEGORIID" class="btn btn-danger">SİL</a> </td>
+            <td> <a href="/Kategori/Getir/@x.KATEGORIID" class="btn btn-warning">GÜNCELLE</a></td>
+        </tr>
+    }
+</table>
+<a href="/Kategori/YeniKategori" class="btn btn-primary">YENİ KATEGORİ EKLE</a>
+

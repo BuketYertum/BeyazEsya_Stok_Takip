@@ -1,0 +1,4 @@
+tek panelli proje
+(Admin paneli)
+
+bu panel üzerinden işlemler gerçekleşmekte.
